@@ -77,7 +77,7 @@ We fine-tuned it for binary classification on X-ray data by modifying the first 
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 Clone the repository and install dependencies:
 
