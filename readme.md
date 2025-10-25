@@ -1,11 +1,11 @@
-# 🫁 Pneumonia Detection from Chest X-Rays (RSNA Challenge)
+#  Pneumonia Detection from Chest X-Rays (RSNA Challenge)
 
 This project focuses on **automated pneumonia detection** from **chest X-ray images**, using **deep learning (CNN)** techniques.  
 The dataset is from the [**RSNA Pneumonia Detection Challenge**](https://www.kaggle.com/competitions/rsna-pneumonia-detection-challenge/), which includes thousands of labeled DICOM images from real patients.
 
 ---
 
-## 📘 Problem Description
+##  Problem Description
 
 Pneumonia is a lung infection that causes inflammation in the air sacs of one or both lungs. Detecting it from X-rays is a common diagnostic approach, but **manual interpretation** can be time-consuming and prone to error.
 
@@ -15,12 +15,12 @@ This project aims to:
 
 ---
 
-## 🧠 Approach Overview
+##  Approach Overview
 
 The main model is based on **ResNet-18**, a well-known CNN architecture.  
 We fine-tuned it for binary classification on X-ray data by modifying the first and last layers.
 
-### 🩺 Workflow Summary
+###  Workflow Summary
 
 1. **Data Preparation**
    - DICOM images were read using `pydicom`.
@@ -48,7 +48,7 @@ We fine-tuned it for binary classification on X-ray data by modifying the first 
 
 ---
 
-## 📊 Results
+##  Results
 
 | Metric | Threshold = 0.5 | Threshold = 0.25 |
 |:--|:--:|:--:|
@@ -57,11 +57,11 @@ We fine-tuned it for binary classification on X-ray data by modifying the first 
 | **Recall** | 0.52 | — |
 | **Confusion Matrix** | `[[1950, 114], [290, 314]]` | `[[1766, 298], [158, 446]]` |
 
-👉 Lowering the decision threshold increases sensitivity (recall) but decreases precision — useful in medical contexts where **missing a pneumonia case is riskier** than a false alarm.
+ Lowering the decision threshold increases sensitivity (recall) but decreases precision — useful in medical contexts where **missing a pneumonia case is riskier** than a false alarm.
 
 ---
 
-## 🧩 Dependencies
+##  Dependencies
 
 | Library | Version |
 |:--|:--|
@@ -89,7 +89,7 @@ conda activate torch
 pip install torch torchvision torchaudio pytorch-lightning torchmetrics
 pip install opencv-python pandas tqdm pydicom tensorboard
 ```
-## 🧾 Training
+##  Training
 
 Make sure your dataset folder structure looks like this:
 
@@ -109,7 +109,7 @@ Checkpoints and logs will be saved under:
 └── logs/
 ```
 
-## 💡 Future Work
+##  Future Work
 
 * Extend model to object detection (bounding box localization of pneumonia areas).
 
